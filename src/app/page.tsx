@@ -89,14 +89,17 @@ export default function Home() {
   }, [user]);
 
   const [loginError, setLoginError] = useState<string | null>(null);
+  const [loginLoading, setLoginLoading] = useState(false);
 
   const handleSignIn = async () => {
     setLoginError(null);
+    setLoginLoading(true);
     try {
       await signInWithGoogle();
     } catch (e: unknown) {
       const err = e as { code?: string; message?: string };
       setLoginError(err.code || err.message || '로그인 실패');
+      setLoginLoading(false);
     }
   };
 
@@ -164,7 +167,7 @@ export default function Home() {
             className="w-full py-3 bg-accent border-2 border-accent-hover shadow-[3px_3px_0px] shadow-accent-hover text-white hover:bg-accent-hover active:shadow-none active:translate-x-[3px] active:translate-y-[3px] transition-all"
             style={{ fontFamily: "'Galmuri11', monospace", fontSize: '13px' }}
           >
-            Google로 시작하기
+            {loginLoading ? '접속 중...' : 'Google로 시작하기'}
           </button>
 
           {loginError && (
