@@ -88,11 +88,15 @@ export default function Home() {
     }
   }, [user]);
 
+  const [loginError, setLoginError] = useState<string | null>(null);
+
   const handleSignIn = async () => {
+    setLoginError(null);
     try {
       await signInWithGoogle();
-    } catch {
-      // User cancelled or popup blocked
+    } catch (e: unknown) {
+      const err = e as { code?: string; message?: string };
+      setLoginError(err.code || err.message || '로그인 실패');
     }
   };
 
@@ -162,6 +166,15 @@ export default function Home() {
           >
             Google로 시작하기
           </button>
+
+          {loginError && (
+            <div
+              className="mt-3 text-danger text-center"
+              style={{ fontFamily: "'Galmuri9', monospace", fontSize: '10px', wordBreak: 'break-all' }}
+            >
+              {loginError}
+            </div>
+          )}
         </div>
 
         <p
