@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #FDF6EC;
+  --bg-warm: #F5EBDA;
+  --surface: #FFFDF7;
+  --surface-2: #F0E6D3;
+  --border: #D4C4A8;
+  --border-dark: #B8A88C;
+  --accent: #E8734A;
+  --accent-hover: #D4603A;
+  --accent-dim: rgba(232, 115, 74, 0.1);
+  --text: #3D2C1E;
+  --text-muted: #8B7355;
+  --text-faint: #C4B49A;
+  --success: #5DB85A;
+  --danger: #E8453C;
+  --str: #E8453C;
+  --int: #4A7DB8;
+  --end: #5DB85A;
+  --foc: #9B59B6;
+  --wil: #E8A634;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg: var(--bg);
+  --color-bg-warm: var(--bg-warm);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-dim: var(--accent-dim);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-str: var(--str);
+  --color-int: var(--int);
+  --color-end: var(--end);
+  --color-foc: var(--foc);
+  --color-wil: var(--wil);
+  --font-pixel: var(--font-press-start);
+  --font-mono: var(--font-ibm-plex);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Galmuri11', 'IBM Plex Mono', monospace;
+  image-rendering: pixelated;
+}
+
+/* Pixel box utility */
+.pixel-box {
+  border: 3px solid var(--border-dark);
+  box-shadow: 3px 3px 0px var(--border);
+  background: var(--surface);
+}
+
+.pixel-box-accent {
+  border: 3px solid var(--accent);
+  box-shadow: 3px 3px 0px var(--accent-hover);
+  background: var(--surface);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
