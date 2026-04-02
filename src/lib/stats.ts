@@ -28,9 +28,9 @@ export function getGlobalLevel(stats: Record<string, number>): number {
 }
 
 export function getTitle(level: number): string {
-  if (level <= 5) return '새싹';
-  if (level <= 10) return '성장 중';
-  if (level <= 20) return '꾸준한 사람';
+  if (level <= 5) return '초심자';
+  if (level <= 10) return '루키';
+  if (level <= 20) return '베테랑';
   return '마스터';
 }
 

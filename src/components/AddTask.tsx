@@ -71,7 +71,7 @@ export default function AddTask({ onAdd }: AddTaskProps) {
           type="text"
           value={label}
           onChange={(e) => setLabel(e.target.value)}
-          placeholder={activeConfig ? activeConfig.examples.split(', ')[0] + '...' : '새 할 일...'}
+          placeholder={activeConfig ? activeConfig.examples.split(', ')[0] + '...' : '새 미션...'}
           className="flex-1 px-3 py-2 border-2 border-border-dark rounded bg-bg text-text text-[13px] outline-none focus:border-accent"
           style={{ fontFamily: "'Galmuri11', monospace" }}
         />

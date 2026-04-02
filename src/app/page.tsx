@@ -129,7 +129,7 @@ export default function Home() {
             className="text-accent mb-3"
             style={{ fontFamily: "var(--font-press-start)", fontSize: '11px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            Li-fe
+            STATME
           </div>
 
           {/* Dialog style intro */}
@@ -186,7 +186,7 @@ export default function Home() {
           className="text-text-faint mt-4"
           style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px' }}
         >
-          작은 습관이 나를 바꾼다.
+          나를 키우는 스탯시트.
         </p>
       </div>
     );
@@ -215,7 +215,7 @@ export default function Home() {
             className="text-accent"
             style={{ fontFamily: "var(--font-press-start)", fontSize: '7px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            Li-fe
+            STATME
           </span>
           <button
             onClick={signOut}
@@ -268,7 +268,7 @@ export default function Home() {
             className="text-text-muted"
             style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', letterSpacing: '0.1em' }}
           >
-            ▶ 성장 기록
+            ▶ STATS
           </span>
         </div>
         <div className="grid grid-cols-2 gap-2">
@@ -288,7 +288,7 @@ export default function Home() {
             className="text-text-muted"
             style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', letterSpacing: '0.1em' }}
           >
-            ▶ 오늘 할 일
+            ▶ 오늘의 미션
           </span>
           {totalToday > 0 && (
             <span

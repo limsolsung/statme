@@ -1,6 +1,6 @@
 {
-  "name": "Li-fe — 나를 키우는 습관",
-  "short_name": "Li-fe",
+  "name": "StatMe — 나를 키우는 스탯시트",
+  "short_name": "StatMe",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FDF6EC",
