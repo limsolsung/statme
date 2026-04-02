@@ -14,7 +14,7 @@ export default function TaskList({ tasks, onComplete, onDelete }: TaskListProps)
   if (tasks.length === 0) {
     return (
       <div className="text-center text-text-muted py-8" style={{ fontFamily: "'Galmuri11', monospace", fontSize: '13px' }}>
-        아직 미션이 없어요. 아래에서 추가해보세요!
+        아직 퀘스트가 없어요. 아래에서 추가해보세요!
       </div>
     );
   }

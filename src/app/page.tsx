@@ -288,7 +288,7 @@ export default function Home() {
             className="text-text-muted"
             style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', letterSpacing: '0.1em' }}
           >
-            ▶ 오늘의 미션
+            ▶ 오늘의 퀘스트
           </span>
           {totalToday > 0 && (
             <span
