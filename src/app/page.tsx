@@ -129,7 +129,7 @@ export default function Home() {
             className="text-accent mb-3"
             style={{ fontFamily: "var(--font-press-start)", fontSize: '11px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            STATME
+            Li-fe
           </div>
 
           {/* Dialog style intro */}
@@ -215,7 +215,7 @@ export default function Home() {
             className="text-accent"
             style={{ fontFamily: "var(--font-press-start)", fontSize: '7px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            STATME
+            Li-fe
           </span>
           <button
             onClick={signOut}

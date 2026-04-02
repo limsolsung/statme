@@ -15,7 +15,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StatMe — 나를 키우는 스탯시트",
+  title: "Li-fe — 나를 키우는 스탯시트",
   description: "나를 키우는 스탯시트",
   manifest: "/manifest.json",
 };
