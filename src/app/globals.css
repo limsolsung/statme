@@ -50,20 +50,21 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Galmuri11', 'IBM Plex Mono', monospace;
-  image-rendering: pixelated;
 }
 
-/* Pixel box utility */
+/* Soft pixel box utility */
 .pixel-box {
-  border: 3px solid var(--border-dark);
-  box-shadow: 3px 3px 0px var(--border);
+  border: 2px solid var(--border-dark);
+  box-shadow: 2px 2px 0px var(--border), 0 1px 4px rgba(0,0,0,0.04);
   background: var(--surface);
+  border-radius: 4px;
 }
 
 .pixel-box-accent {
-  border: 3px solid var(--accent);
-  box-shadow: 3px 3px 0px var(--accent-hover);
+  border: 2px solid var(--accent);
+  box-shadow: 2px 2px 0px var(--accent-hover), 0 1px 4px rgba(0,0,0,0.04);
   background: var(--surface);
+  border-radius: 4px;
 }
 
 @keyframes pulse {

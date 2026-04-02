@@ -15,8 +15,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StatMe — 현실 스탯시트",
-  description: "게임처럼 현실을 레벨업하세요",
+  title: "Li-fe — 나를 키우는 습관",
+  description: "작은 습관이 나를 바꾼다",
   manifest: "/manifest.json",
 };
 

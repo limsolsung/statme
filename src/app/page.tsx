@@ -125,19 +125,19 @@ export default function Home() {
 
           <div
             className="text-accent mb-3"
-            style={{ fontFamily: "var(--font-press-start)", fontSize: '12px', lineHeight: '2' }}
+            style={{ fontFamily: "var(--font-press-start)", fontSize: '11px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            STATME
+            Li-fe
           </div>
 
-          {/* RPG dialog style intro */}
+          {/* Dialog style intro */}
           <div className="pixel-box-accent p-3 mb-4 text-left relative">
             <p
               className="text-text"
               style={{ fontFamily: "'Galmuri11', monospace", fontSize: '12px', lineHeight: '1.8' }}
             >
-              퀘스트를 완료하고<br />
-              캐릭터를 성장시키세요.
+              할 일을 완료하고<br />
+              나만의 성장을 기록하세요.
             </p>
             <span
               className="absolute bottom-1.5 right-2.5 text-accent"
@@ -154,8 +154,8 @@ export default function Home() {
               return (
                 <div key={type} className="flex flex-col items-center gap-1">
                   <PixelIcon name={config.icon} color={config.color} size={1.5} />
-                  <span style={{ fontFamily: "var(--font-press-start)", fontSize: '5px', color: config.color, lineHeight: '2' }}>
-                    {type}
+                  <span style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', color: config.color, lineHeight: '1.6', fontWeight: 600 }}>
+                    {config.label}
                   </span>
                 </div>
               );
@@ -164,7 +164,7 @@ export default function Home() {
 
           <button
             onClick={handleSignIn}
-            className="w-full py-3 bg-accent border-2 border-accent-hover shadow-[3px_3px_0px] shadow-accent-hover text-white hover:bg-accent-hover active:shadow-none active:translate-x-[3px] active:translate-y-[3px] transition-all"
+            className="w-full py-3 bg-accent border-2 border-accent-hover shadow-[2px_2px_0px] shadow-accent-hover text-white rounded hover:bg-accent-hover active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all"
             style={{ fontFamily: "'Galmuri11', monospace", fontSize: '13px' }}
           >
             {loginLoading ? '접속 중...' : 'Google로 시작하기'}
@@ -184,7 +184,7 @@ export default function Home() {
           className="text-text-faint mt-4"
           style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px' }}
         >
-          현실을 게임처럼. Level up your life.
+          작은 습관이 나를 바꾼다.
         </p>
       </div>
     );
@@ -207,13 +207,13 @@ export default function Home() {
     <div className="min-h-screen bg-bg flex flex-col max-w-md mx-auto">
 
       {/* ─── HEADER ─── */}
-      <header className="border-b-[3px] border-border-dark bg-bg-warm">
+      <header className="border-b-2 border-border-dark bg-bg-warm">
         <div className="flex items-center justify-between px-4 pt-3 pb-1">
           <span
             className="text-accent"
-            style={{ fontFamily: "var(--font-press-start)", fontSize: '7px', lineHeight: '2' }}
+            style={{ fontFamily: "var(--font-press-start)", fontSize: '7px', lineHeight: '2', letterSpacing: '0.05em' }}
           >
-            STATME
+            Li-fe
           </span>
           <button
             onClick={signOut}
@@ -242,9 +242,9 @@ export default function Home() {
             </div>
             {/* Level progress bar */}
             <div className="flex items-center gap-2 mt-1.5">
-              <div className="flex-1 h-[6px] bg-surface-2 border border-border overflow-hidden">
+              <div className="flex-1 h-[6px] bg-surface-2 border border-border overflow-hidden rounded-sm">
                 <div
-                  className="h-full bg-accent transition-all duration-700"
+                  className="h-full bg-accent transition-all duration-700 rounded-sm"
                   style={{ width: `${levelProgress}%` }}
                 />
               </div>
@@ -266,7 +266,7 @@ export default function Home() {
             className="text-text-muted"
             style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', letterSpacing: '0.1em' }}
           >
-            ▶ STATS
+            ▶ 성장 기록
           </span>
         </div>
         <div className="grid grid-cols-2 gap-2">
@@ -286,7 +286,7 @@ export default function Home() {
             className="text-text-muted"
             style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px', letterSpacing: '0.1em' }}
           >
-            ▶ 오늘의 퀘스트
+            ▶ 오늘 할 일
           </span>
           {totalToday > 0 && (
             <span

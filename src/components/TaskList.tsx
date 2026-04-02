@@ -14,7 +14,7 @@ export default function TaskList({ tasks, onComplete, onDelete }: TaskListProps)
   if (tasks.length === 0) {
     return (
       <div className="text-center text-text-muted py-8" style={{ fontFamily: "'Galmuri11', monospace", fontSize: '13px' }}>
-        아직 퀘스트가 없습니다. 아래에서 추가하세요!
+        아직 할 일이 없어요. 아래에서 추가해보세요!
       </div>
     );
   }
@@ -30,12 +30,12 @@ export default function TaskList({ tasks, onComplete, onDelete }: TaskListProps)
             <button
               onClick={() => !isCompleted && onComplete(task.id, task.statTag)}
               disabled={isCompleted}
-              className={`w-[18px] h-[18px] border-2 flex-shrink-0 flex items-center justify-center transition-all ${
+              className={`w-[18px] h-[18px] border-2 rounded-sm flex-shrink-0 flex items-center justify-center transition-all ${
                 isCompleted
                   ? 'bg-success border-[#4A9648] text-white'
                   : 'border-border-dark bg-surface hover:border-accent'
               }`}
-              style={{ fontFamily: "var(--font-press-start)", fontSize: '7px' }}
+              style={{ fontFamily: "'Galmuri9', monospace", fontSize: '9px' }}
             >
               {isCompleted && '✓'}
             </button>
@@ -48,19 +48,19 @@ export default function TaskList({ tasks, onComplete, onDelete }: TaskListProps)
               </div>
               {config && (
                 <span
-                  className="inline-flex items-center gap-1 mt-1 border"
+                  className="inline-flex items-center gap-1 mt-1 border rounded-sm"
                   style={{
-                    fontSize: '6px',
-                    lineHeight: '2.5',
+                    fontSize: '9px',
+                    lineHeight: '1.8',
                     padding: '2px 6px',
                     borderColor: config.color,
                     color: config.color,
                     backgroundColor: config.color + '0F',
-                    fontFamily: "var(--font-press-start)",
+                    fontFamily: "'Galmuri9', monospace",
                   }}
                 >
                   <PixelIcon name={config.icon} color={config.color} size={1.5} />
-                  {task.statTag} +1
+                  {config.label} +1
                 </span>
               )}
             </div>

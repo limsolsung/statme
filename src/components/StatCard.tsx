@@ -19,10 +19,10 @@ export default function StatCard({ type, xp }: StatCardProps) {
         <PixelIcon name={config.icon} color={config.color} size={2} />
         <div>
           <span
-            className="text-text-muted uppercase block"
-            style={{ fontFamily: 'var(--font-press-start)', fontSize: '7px', lineHeight: '2' }}
+            className="text-text-muted block"
+            style={{ fontFamily: "'Galmuri9', monospace", fontSize: '10px', lineHeight: '1.6', fontWeight: 600 }}
           >
-            {type}
+            {config.label}
           </span>
           <span
             className="text-text-faint block"
@@ -38,9 +38,9 @@ export default function StatCard({ type, xp }: StatCardProps) {
       >
         {xp}
       </div>
-      <div className="h-1.5 bg-surface-2 border border-border overflow-hidden">
+      <div className="h-1.5 bg-surface-2 border border-border overflow-hidden rounded-sm">
         <div
-          className="h-full transition-all duration-500"
+          className="h-full transition-all duration-500 rounded-sm"
           style={{ width: `${progress.percentage}%`, backgroundColor: config.color }}
         />
       </div>
